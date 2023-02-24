@@ -1,8 +1,16 @@
 # Roberta Zinc 480m
 
-This is a Roberta style masked language model trained on ~480m SMILES strings from the [ZINC database](https://zinc.docking.org/) available through Huggingface.
+This is a Roberta style masked language model trained on ~480m SMILES strings from the [ZINC database](https://zinc.docking.org/) available through [Huggingface](https://huggingface.co/entropy/roberta_zinc_480m).
 The model has ~102m parameters and was trained for 150000 iterations with a batch size of 4096 to a validation loss of ~0.122.
 This model is useful for generating embeddings from SMILES strings.
+
+To use, install the [transformers](https://github.com/huggingface/transformers) library:
+
+```
+pip install transformers
+```
+
+Then use the following:
 
 ```python
 from transformers import RobertaTokenizerFast, RobertaForMaskedLM, DataCollatorWithPadding
