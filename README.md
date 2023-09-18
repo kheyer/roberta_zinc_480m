@@ -31,3 +31,8 @@ full_embeddings = outputs[1][-1]
 mask = inputs['attention_mask']
 embeddings = ((full_embeddings * mask.unsqueeze(-1)).sum(1) / mask.sum(-1).unsqueeze(-1))
 ```
+
+## Decoder
+
+There is also a [decoder model](https://github.com/kheyer/roberta_zinc_decoder) trained to reconstruct 
+inputs from embeddings
